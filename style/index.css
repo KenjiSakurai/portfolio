@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&family=Nixie+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.main-cont{
+    width: 70vw;
+    height: 100vh;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.dev-name{
+    margin: 0.25em 1em 0 1em;
+    font-size: 5vw;
+    color: #FFC123;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-family: 'Nixie One', cursive;
+    text-shadow: #E64725 0 0 10px;
+}
+
+.dev-desc{
+    margin: 0.5em 2.5em 1.5em 2.5em;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.35em;
+    font-family: 'Homenaje', sans-serif;
+}
+
+.option-box{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.option{
+    margin: auto;
+    width: 50vw;
+    height: 15vh;
+    line-height: 15vh;
+    font-size: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-family: 'Homenaje', sans-serif;
+    border: 5px solid #FFC123;
+    box-sizing: border-box;
+    box-shadow: -0.75vw -1.5vh #FFC123;
+    transform: translateX(0vw);
+    transition: 0.5s;
+}
+
+.option:hover{
+    transform: translateX(5vw);
+    color: black;
+    background-color: #FFC123;
+    border: 5px solid #E64725;
+    -moz-box-shadow: 0 0 30px #E64725;
+    -webkit-box-shadow: 0 0 30px #E64725;
+    box-shadow: 0 0 30px #E64725;
+}
