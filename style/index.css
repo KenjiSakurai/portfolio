@@ -8,7 +8,39 @@
 
 body{
     background-color: black;
+    cursor: url('../images/cursor.png'), url('..images/cursor2.png') pointer;
+
 }
+
+.left-gear{
+    width: 30vw;
+    height: auto;
+    margin: -15vw 0 0 -15vw;
+    animation: rotate 15s infinite linear;
+    position: fixed;
+
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.right-gear{
+    width: 30vw;
+    height: 30vw;
+    animation: rotate2 15s infinite linear;
+    position: fixed;
+    top: 70vh;
+    right: -12vw;
+
+}
+
+@keyframes rotate2 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 
 .main-cont{
     width: 70vw;
@@ -18,7 +50,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .dev-name{
@@ -29,6 +60,7 @@ body{
     letter-spacing: 0.2em;
     font-family: 'Nixie One', cursive;
     text-shadow: #E64725 0 0 10px;
+    z-index: 100;
 }
 
 .dev-desc{
@@ -41,7 +73,7 @@ body{
 }
 
 .option-box{
-    width: 70vw;
+    width: 100%;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -71,8 +103,140 @@ body{
     transform: translateX(5vw);
     color: black;
     background-color: #FFC123;
+    border: 1px solid #E64725;
+    -moz-box-shadow: 0 0 30px #E64725;
+    -webkit-box-shadow: 0 0 30px #E64725;
+    box-shadow: 0 0 30px #E64725;
+}
+
+
+
+.side-cont{
+    width: 70vw;
+    height: 100vh;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-box{
+    margin: 3vh 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heading{
+    margin: auto;
+    width: 50vw;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-family: 'Homenaje', sans-serif;
+    border: 5px solid #FFC123;
+    box-sizing: border-box;
+    box-shadow: -0.75vw -1.5vh #FFC123;
+}
+
+.back-btn{
+    margin: auto;
+    width: 8vw;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-family: 'Homenaje', sans-serif;
+    border: 5px solid #FFC123;
+    box-sizing: border-box;
+    box-shadow: -0.75vw -1.5vh #FFC123;
+    transform: translateX(0vw);
+    transition: 0.5s;
+}
+
+.back-btn:hover{
+    transform: translateX(1vw);
+    color: black;
+    background-color: #FFC123;
     border: 5px solid #E64725;
     -moz-box-shadow: 0 0 30px #E64725;
     -webkit-box-shadow: 0 0 30px #E64725;
     box-shadow: 0 0 30px #E64725;
 }
+
+
+.social-box{
+    padding: 3vh 0 2vh 0;
+    width: 100%;
+    height: auto;
+    background-color: green;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.social{
+    width: 65vw;
+    height: 10vw;
+    margin: 2vh 0 2vh 2.5vw;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-img{
+    width: 10vw;
+    height: 10vw;
+    background-color: gray;
+}
+
+.social-text{
+    width: 52vw;
+    height: 8vw;
+    background-color: yellow;
+    margin: auto;
+}
+
+
+
+@media only screen and (max-width: 40em) { 
+
+    .left-gear{
+        width: 50vw;
+        height: 50vw;
+        margin: -25vw 0 0 -25vw;
+    }
+
+    .right-gear{
+        width: 50vw;
+        height: 50vw;
+        top: 87vh;
+        right: -20vw;
+    }
+
+    .main-cont, .side-cont{
+        width: 100vw;
+    }
+
+    .dev-name{
+        font-size: 8vw;
+    }
+
+    .dev-desc{
+        font-size: 3vw;
+    }
+
+    .option{
+        width: 80vw;
+        font-size: 8vw;
+    }
+} 
