@@ -8,26 +8,40 @@
     <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
+    <img class="left-gear" src="../images/gear.png" alt="gear">
     <div class="side-cont">
         <div class="heading-box">
             <h2 class="heading">Contact</h2>
-            <a class="back-btn" href="../index.html"> ← </a>
+            <a class="back-btn" href="index.html"> ← </a>
         </div>
 
         <div class="social-box">
-            <div class="social">
-                <img class="social-img" src="" alt="Email-img">
-                <p class="social-text">Email: sakurai.kenji.se@gmail.com</p>
+            <div class="social" onclick="mailClick()">
+                <img id="gmail" class="social-img" src="../images/gmail-white.png" alt="Email-img">
+                <p class="social-text">Email: sakurai.kenji.work@gmail.com</p>
             </div>
-            <div class="social">
-                <img class="social-img" src="" alt="Github-img">
-                <p class="social-text"></p>
+            <div class="social" onclick="linkedInClick()">
+                <img id="linkedin" class="social-img" src="../images/linkedin-white.png" alt="LinkedIn-img">
+                <p class="social-text">LinkedIn: Kenji Sakurai</p>
             </div>            
-            <div class="social">
-                <img class="social-img" src="" alt="Something else">
-                <p class="social-text"></p>
+            <div class="social" onclick="gitHubClick()">
+                <img id="github" class="social-img" src="../images/github-white.png" alt="Something else">
+                <p class="social-text">GitHub: Kenji Sakurai</p>
             </div>
         </div>
     </div>
+    <script>
+        function mailClick(){
+            window.location = "mailto:sakurai.kenji.se@gmail.com";
+        }
+
+        function linkedInClick(){
+            window.location = "https://www.linkedin.com/in/kenji-sakurai/";
+        }
+
+        function gitHubClick(){
+            window.location = "https://github.com/KenjiSakurai";
+        }
+    </script>
 </body>
 </html>

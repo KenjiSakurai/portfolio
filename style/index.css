@@ -1,6 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Homenaje&family=Nixie+One&display=swap');
 
+:root{
+    --Yellorange: #FFC123;
+    --Redorange: #E64720;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,9 +14,8 @@
 
 body{
     background-color: black;
-    cursor: url('../images/cursor.png'), url('..images/cursor2.png') pointer;
-
 }
+
 
 .left-gear{
     width: 30vw;
@@ -52,14 +57,18 @@ body{
     justify-content: center;
 }
 
+.main-cont:has(.option:hover){
+    background-image: linear-gradient(to right, black , rgb(27, 11, 0), black);
+} 
+
 .dev-name{
     margin: 0.25em 1em 0 1em;
     font-size: 5vw;
-    color: #FFC123;
+    color: var(--Yellorange);
     text-align: center;
     letter-spacing: 0.2em;
     font-family: 'Nixie One', cursive;
-    text-shadow: #E64725 0 0 10px;
+    text-shadow: var(--Redorange) 0 0 10px;
     z-index: 100;
 }
 
@@ -92,9 +101,9 @@ body{
     color: white;
     background-color: black;
     font-family: 'Homenaje', sans-serif;
-    border: 5px solid #FFC123;
+    border: 5px solid var(--Yellorange);
     box-sizing: border-box;
-    box-shadow: -0.75vw -1.5vh #FFC123;
+    box-shadow: -0.75vw -1.5vh var(--Yellorange);
     transform: translateX(0vw);
     transition: 0.5s;
 }
@@ -102,11 +111,12 @@ body{
 .option:hover{
     transform: translateX(5vw);
     color: black;
-    background-color: #FFC123;
-    border: 1px solid #E64725;
-    -moz-box-shadow: 0 0 30px #E64725;
-    -webkit-box-shadow: 0 0 30px #E64725;
-    box-shadow: 0 0 30px #E64725;
+    background-color: var(--Yellorange);
+    border: 1px solid var(--Redorange);
+    -moz-box-shadow: 0 0 30px var(--Redorange);
+    -webkit-box-shadow: 0 0 30px var(--Redorange);
+    box-shadow: 0 0 30px var(--Redorange);
+    cursor: pointer;
 }
 
 
@@ -138,9 +148,9 @@ body{
     color: white;
     background-color: black;
     font-family: 'Homenaje', sans-serif;
-    border: 5px solid #FFC123;
+    border: 5px solid var(--Yellorange);
     box-sizing: border-box;
-    box-shadow: -0.75vw -1.5vh #FFC123;
+    box-shadow: -0.75vw -1.5vh var(--Yellorange);
 }
 
 .back-btn{
@@ -154,9 +164,9 @@ body{
     color: white;
     background-color: black;
     font-family: 'Homenaje', sans-serif;
-    border: 5px solid #FFC123;
+    border: 5px solid var(--Yellorange);
     box-sizing: border-box;
-    box-shadow: -0.75vw -1.5vh #FFC123;
+    box-shadow: -0.75vw -1.5vh var(--Yellorange);
     transform: translateX(0vw);
     transition: 0.5s;
 }
@@ -164,11 +174,11 @@ body{
 .back-btn:hover{
     transform: translateX(1vw);
     color: black;
-    background-color: #FFC123;
-    border: 5px solid #E64725;
-    -moz-box-shadow: 0 0 30px #E64725;
-    -webkit-box-shadow: 0 0 30px #E64725;
-    box-shadow: 0 0 30px #E64725;
+    background-color: var(--Yellorange);
+    border: 5px solid var(--Redorange);
+    -moz-box-shadow: 0 0 30px var(--Redorange);
+    -webkit-box-shadow: 0 0 30px var(--Redorange);
+    box-shadow: 0 0 30px var(--Redorange);
 }
 
 
@@ -176,8 +186,6 @@ body{
     padding: 3vh 0 2vh 0;
     width: 100%;
     height: auto;
-    background-color: green;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -187,23 +195,80 @@ body{
     width: 65vw;
     height: 10vw;
     margin: 2vh 0 2vh 2.5vw;
-    background-color: red;
+    border: 5px solid var(--Yellorange);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.social:hover{
+    background-color: var(--Yellorange);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.social:hover .social-text{
+    color: black;
+}
+
 .social-img{
-    width: 10vw;
-    height: 10vw;
-    background-color: gray;
+    width: 7vw;
+    height: 7vw;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.social:hover > .social-img{
+    width: 8vw;
+    height: 8vw;
+}
+
+.social:hover > #gmail{
+    content: url(../images/gmail-black.png);
+
+}
+
+.social:hover > #linkedin{
+    content: url(../images/linkedin-black.png);
+
+}
+
+.social:hover > #github{
+    content: url(../images/github-black.png);
+
 }
 
 .social-text{
     width: 52vw;
-    height: 8vw;
-    background-color: yellow;
+    color: white;
     margin: auto;
+    padding: 4vh 0 4vh 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
+    vertical-align: center;
+}
+
+.about-box{
+    padding: 3vh 0 2vh 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.about-text{
+    width: 50vw;
+    margin: 5vh;
+    height: auto;
+    color: white;
+    border: 5px solid var(--Yellorange);
+    box-sizing: border-box;
+    padding: 5vh 5vw 5vh 5vw;
+    font-size: 3vh;
+    letter-spacing: 0.2vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
 }
 
 
